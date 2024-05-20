@@ -43,23 +43,23 @@ public class Heroi extends JLabel {
         this.nivel = nivel;
         this.auxDragao = auxDragao;
         
-        andandoDireita = new ArrayList();
+        andandoDireita = new ArrayList<>();
         andandoDireita.add("imagemmmm/Primeiro_Passo_D.png");
         andandoDireita.add("imagemmmm/Segundo_Passo_D.png");
         andandoDireita.add("imagemmmm/Terceiro_Passo_D.png");
         
-        andandoEsqueda = new ArrayList();
+        andandoEsqueda = new ArrayList<>();
         andandoEsqueda.add("imagemmmm/Primeiro_Passe_E.png");
         andandoEsqueda.add("imagemmmm/Segundo_Passo_E.png");
         andandoEsqueda.add("imagemmmm/Terceiro_Passo_E.png");
         
-        heroiAtacandoDireita = new ArrayList();
+        heroiAtacandoDireita = new ArrayList<>();
         heroiAtacandoDireita.add("imagemmmm/Primeiro_Ataque_D.png");
         heroiAtacandoDireita.add("imagemmmm/Segundo_Ataque_D.png");
         heroiAtacandoDireita.add("imagemmmm/Terceiro_Ataque_D.png");
         heroiAtacandoDireita.add("imagemmmm/Quarto_Ataque_D.png");
         
-        heroiAtacandoEsquerda = new ArrayList();
+        heroiAtacandoEsquerda = new ArrayList<>();
         heroiAtacandoEsquerda.add("imagemmmm/Primeiro_Ataque_E.png");
         heroiAtacandoEsquerda.add("imagemmmm/Segundo_Ataque_E.png");
         heroiAtacandoEsquerda.add("imagemmmm/Terceiro_Ataque_E.png");

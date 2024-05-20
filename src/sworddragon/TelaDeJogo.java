@@ -4,23 +4,17 @@
  * and open the template in the editor.
  */
 package sworddragon;
-
 import java.awt.Color;
-import java.awt.Component;
-import java.awt.Font;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.util.ArrayList;
 import java.util.Random;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
-import static javax.swing.JFrame.EXIT_ON_CLOSE;
 import javax.swing.JLabel;
 import model.ThreadBatalha2;
 import model.ThreadGravidade2;
 import model.ThreadHeroiAtacando;
-import model.ThreadMovimentacaoChefe;
-import personagem.Esqueleto;
 import personagem.Heroi;
 import personagem.Inimigo;
 
@@ -57,34 +51,34 @@ public class TelaDeJogo extends JFrame  implements KeyListener{
         this.setTitle("Sword Dragon");
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
         
-       Random rand = new Random ();
-       heroi= new Heroi(100,10,10,10,0,0,rand.nextInt(10) );
-       heroi.setBounds(0, 380,heroi.getIcon().getIconWidth(),heroi.getIcon().getIconHeight());
-       heroi.setAntesVida(heroi.getVida());
-       this.add(heroi);
+        Random rand = new Random ();
+        heroi= new Heroi(100,10,10,10,0,0,rand.nextInt(10) );
+        heroi.setBounds(0, 380,heroi.getIcon().getIconWidth(),heroi.getIcon().getIconHeight());
+        heroi.setAntesVida(heroi.getVida());
+        this.add(heroi);
        
        
         Vida_Do_Personagem=new JLabel("HP: " + heroi.getVida());
-        Vida_Do_Personagem.setBounds(50,10,150,25);
+        Vida_Do_Personagem.setBounds(50,10,200,100);
         Vida_Do_Personagem.setForeground(Color.RED);
 
         this.add(Vida_Do_Personagem);
         
         numerodapontuacao = 0;
         Pontuacao = new JLabel ("Pontuacao:" + numerodapontuacao );
-        Pontuacao.setBounds(800,10,200,25);
+        Pontuacao.setBounds(1300,10,200,100);
         Pontuacao.setForeground(Color.RED);
 
         this.add(Pontuacao);
       
-       cenario = new JLabel(new ImageIcon("imagemmmm/TelaDeJogo.jpg"));
-      cenario.setBounds(0, 0, 1920, 692);
+        cenario = new JLabel(new ImageIcon("imagemmmm/TelaDeJogo.jpg"));
+        cenario.setBounds(0, 0, 1920, 692);
       
-      this.add(cenario);
+        this.add(cenario);
     
       
       auxcontador = 2;
-      inimigos = new ArrayList();
+      inimigos = new ArrayList<>();
       gameOver = (false); 
       chefe = false;
       
@@ -94,9 +88,9 @@ public class TelaDeJogo extends JFrame  implements KeyListener{
        
     
 
-    new ThreadGravidade2(this).start();
-     new ThreadBatalha2(this).start();
-    // new ThreadMovimentacaoChefe(this).start();
+      new ThreadGravidade2(this).start();
+      new ThreadBatalha2(this).start();
+      // new ThreadMovimentacaoChefe(this).start();
 
     
     }  

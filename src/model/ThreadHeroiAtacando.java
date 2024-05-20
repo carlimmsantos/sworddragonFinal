@@ -5,7 +5,6 @@
  */
 package model;
 
-import static java.lang.Thread.sleep;
 import javax.swing.ImageIcon;
 import personagem.Heroi;
 

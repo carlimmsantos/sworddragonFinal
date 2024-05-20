@@ -22,12 +22,7 @@ public class Chefe extends Inimigo {
         getEnderecosImagemAndandoEsquerda().add("imagemmmm/Boss_Esquerda_2.png");
         getEnderecosImagemAndandoEsquerda().add("imagemmmm/Boss_Esquerda_3.png");
         getEnderecosImagemAndandoEsquerda().add("imagemmmm/Boss_Esquerda_4.png");
-        
-        getEnderecosImagemAndandoHorisontalDireita().add("imagemmmm/Boss_Direita_1.png");
-        getEnderecosImagemAndandoHorisontalDireita().add("imagemmmm/Boss_Direita_2.png");
-        getEnderecosImagemAndandoHorisontalDireita().add("imagemmmm/Boss_Direita_3.png");        
-        getEnderecosImagemAndandoHorisontalDireita().add("imagemmmm/Boss_Direita_4.png");
-
+      
         setSize(getIcon().getIconWidth(),getIcon().getIconHeight());
         
       

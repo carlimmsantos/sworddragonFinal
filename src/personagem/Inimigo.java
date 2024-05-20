@@ -22,9 +22,9 @@ public class Inimigo extends JLabel{
     public Inimigo( ) {
  
     
-        enderecosImagemAndandoEsquerda= new ArrayList();
-        enderecosImagemAndandoDireita= new ArrayList();
-        enderecosImagemAtacando= new ArrayList();
+        enderecosImagemAndandoEsquerda= new ArrayList<>();
+        enderecosImagemAndandoDireita= new ArrayList<>();
+        enderecosImagemAtacando= new ArrayList<>();
         
     }
 
@@ -93,24 +93,8 @@ public class Inimigo extends JLabel{
         return enderecosImagemAndandoEsquerda;
     }
 
-    public void setEnderecosImagemAndandoEsquerda(ArrayList<String> enderecosImagemAndandoHorisontalEsquerda) {
-        this.enderecosImagemAndandoEsquerda = enderecosImagemAndandoEsquerda;
-    }
-
     public int getImagemAtualAndandoHorisontalEsquerda() {
         return imagemAtualAndandoEsquerda;
-    }
-
-    public void setImagemAtualAndandoHorisontalEsquerda(int imagemAtualAndandoEsquerda) {
-        this.imagemAtualAndandoEsquerda = imagemAtualAndandoEsquerda;
-    }
-
-    public ArrayList<String> getEnderecosImagemAndandoHorisontalDireita() {
-        return enderecosImagemAndandoDireita;
-    }
-
-    public void setEnderecosImagemAndandoHorisontalDireita(ArrayList<String> enderecosImagemAndandoHorisontalDireita) {
-        this.enderecosImagemAndandoDireita = enderecosImagemAndandoHorisontalDireita;
     }
 
     public int getImagemAtualAndandoDireita() {
@@ -121,23 +105,7 @@ public class Inimigo extends JLabel{
         this.imagemAtualAndandoDireita = imagemAtualAndandoDireita;
     }
 
-    public int proximaImagemAndandoHorisontalEsquerda(){
-        if (imagemAtualAndandoEsquerda==enderecosImagemAndandoEsquerda.size()-1){
-            imagemAtualAndandoEsquerda=0;
-        } else{
-            imagemAtualAndandoEsquerda++;
-        }
-        return imagemAtualAndandoEsquerda;
-    }
-    
-    public int proximaImagemAndandoHorisontalDirita(){
-        if (imagemAtualAndandoDireita==enderecosImagemAndandoDireita.size()-1){
-            imagemAtualAndandoDireita=0;
-        } else{
-            imagemAtualAndandoDireita++;
-        }
-        return imagemAtualAndandoDireita;
-    }
+
 
     public int getDanoInimigo() {
         return danoInimigo;

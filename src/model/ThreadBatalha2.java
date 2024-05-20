@@ -5,11 +5,8 @@
  */
 package model;
 
-import static java.lang.Thread.sleep;
-import java.util.ArrayList;
 import java.util.Random;
 import javax.swing.ImageIcon;
-import personagem.Chefe;
 import personagem.Esqueleto;
 import personagem.Heroi;
 import personagem.Inimigo;
@@ -32,7 +29,7 @@ public class ThreadBatalha2 extends Thread {
         
         
 
-        while (tela.getGameOver() == false && tela.isChefe() == false) {
+        while (tela.getGameOver() == false) {
             
            
             if (tela.getHeroi().getVida() <= 0) {
@@ -51,10 +48,10 @@ public class ThreadBatalha2 extends Thread {
             }
 
             Random rad = new Random();
-            if (tela.getInimigos().size() < 2 && rad.nextInt(10) > 5) {
+            if (tela.getInimigos().size() < 2 && rad.nextInt(10) > 3) {
 
                 Esqueleto esqueleto = new Esqueleto(50,10,5,rad.nextInt(1) + 1);
-                esqueleto.setBounds(rad.nextInt(1000), 380, esqueleto.getIcon().getIconWidth(), esqueleto.getIcon().getIconHeight());
+                esqueleto.setBounds(rad.nextInt(1000), 400, esqueleto.getIcon().getIconWidth(), esqueleto.getIcon().getIconHeight());
 
                 tela.add(esqueleto);
                 tela.getInimigos().add(esqueleto);
@@ -71,8 +68,9 @@ public class ThreadBatalha2 extends Thread {
             }
             if (rad.nextInt(10) > 5 && tela.getHeroi().getVida() <= tela.getHeroi().getAntesVida() && tela.getGameOver() == false){
             
-                tela.getHeroi().setVida(tela.getHeroi().getVida() + 20);
+                tela.getHeroi().setVida(tela.getHeroi().getVida() + 5);
                 tela.getVida_Do_Personagem().setText("HP " + tela.getHeroi().getVida());
+        
             
             }
 

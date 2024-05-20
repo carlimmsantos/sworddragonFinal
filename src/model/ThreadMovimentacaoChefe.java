@@ -6,8 +6,6 @@
 package model;
 
 import java.awt.Component;
-import java.awt.Image;
-import static java.lang.Thread.sleep;
 import javax.swing.ImageIcon;
 import personagem.Chefe;
 import sworddragon.TelaDeJogo;
